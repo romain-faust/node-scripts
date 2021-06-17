@@ -4,6 +4,7 @@ const { Command } = require('commander')
 
 const build = require('../scripts/build')
 const format = require('../scripts/format')
+const lint = require('../scripts/lint')
 const start = require('../scripts/start')
 const test = require('../scripts/test')
 
@@ -40,6 +41,23 @@ program
 		try {
 			process.exitCode = await format({
 				check: options.check,
+				input: filesOrDirectories,
+			})
+		} catch (error) {
+			console.error(error.stack)
+			process.exitCode = 1
+		}
+	})
+
+// prettier-ignore
+program
+	.command('lint <file-or-directory...>')
+	.description('run the code analysis')
+	.option('--no-fix', 'report the problems instead of automatically fixing them')
+	.action(async (filesOrDirectories, options) => {
+		try {
+			process.exitCode = await lint({
+				fix: options.fix,
 				input: filesOrDirectories,
 			})
 		} catch (error) {

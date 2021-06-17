@@ -25,6 +25,7 @@ In the `scripts` section of your `package.json`:
 	"scripts": {
 		"build": "node-scripts build sources",
 		"format": "node-scripts format sources",
+		"lint": "node-scripts lint sources",
 		"start": "node-scripts start sources/index.ts",
 		"test": "node-scripts test"
 	}
