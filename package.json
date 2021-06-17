@@ -16,7 +16,9 @@
 	},
 	"description": "Set of scripts for Node.js",
 	"devDependencies": {
-		"@romain-faust/prettier-config": "~2.0.4"
+		"@romain-faust/prettier-config": "~2.0.4",
+		"husky": "~6.0.0",
+		"lint-staged": "~11.0.0"
 	},
 	"files": [
 		"bin",
