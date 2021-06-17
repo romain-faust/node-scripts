@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.1.0] - 2021-06-17
+
 ### Added
 
 -   Add a `lint` command used to lint files with `ESLint`.
