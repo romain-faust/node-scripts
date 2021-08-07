@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+-   Specify default `build` output directory with `commander` default value.
+
 ## [1.1.1] - 2021-06-17
 
 ### Added

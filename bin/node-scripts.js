@@ -18,13 +18,13 @@ program
 	.command('build <file-or-directory...>')
 	.description('build for production')
 	.option('--no-delete-output-dir-on-start', 'do not remove the output directory on start')
-	.option('--output-dir <directory>', `change the output directory (default: ${DEFAULT_OUTPUT_DIR})`)
+	.option('--output-dir <directory>', 'change the output directory', DEFAULT_OUTPUT_DIR)
 	.action(async (filesOrDirectories, options) => {
 		try {
 			process.exitCode = await build({
 				deleteOutputDirOnStart: options.deleteOutputDirOnStart,
 				input: filesOrDirectories,
-				outputDir: options.outputDir || DEFAULT_OUTPUT_DIR,
+				outputDir: options.outputDir,
 			})
 		} catch (error) {
 			console.error(error.stack)
